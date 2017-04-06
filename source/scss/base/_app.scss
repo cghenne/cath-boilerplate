@@ -1,0 +1,123 @@
+body {
+  font-size: 14px;
+  background: #f2f2f2;
+}
+
+.Menu {
+  background: #264d73;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 103;
+
+  .logo {
+    margin: 10px;
+    width: 60px;
+  }
+}
+
+.Page {
+  margin: 100px 0 50px 0;
+}
+
+.ErrorMessage {
+  color: #e62e00;
+  font-size: 18px;
+  text-align: center;
+}
+
+.ContainerList {
+  margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: strech;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.Movie {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+  width: 23%;
+  margin: 0 1% 20px 1%;
+  z-index: 100;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.30);
+  }
+
+  .imgContainer {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: #808080;
+    padding: 20px;
+  }
+}
+
+.Spinner {
+  margin: auto;
+  width: 60px;
+  height: 16px;
+  text-align: center;
+  font-size: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+  .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+
+  .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+
+  .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+
+  .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+}
+
+.Spinner > div {
+  background-color: #264d73;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  margin-left: 3px;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
